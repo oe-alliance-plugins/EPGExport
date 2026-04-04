@@ -1,0 +1,19 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "EPGExport Plugin",
+  "description_recipe": "EPGExport Plugin",
+  "history_source_dir": "epgexport",
+  "internal_package_name": "enigma2-plugin-extensions-epgexport",
+  "module_dir_name": "EPGExport",
+  "output_subdir": "epgexport",
+  "package_name": "enigma2-plugin-extensions-epgexport",
+  "plugin_src_rel": "epgexport",
+  "python_package": "EPGExport",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "EPGExport",
+  "rrecommends": "",
+  "rreplaces": "",
+  "selected_from_plugin_list": true
+}
