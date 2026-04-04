@@ -797,7 +797,7 @@ class EPGExport(Screen):
 
 	def getTimezoneOffset(self):
 		ts = time()  # utc time
-		tl = localtime()  # local time == (utc time + utc offset)
+#		tl = localtime()  # local time == (utc time + utc offset)
 #       td = timedelta(minutes=int(tl.tm_isdst)*60) # summertime is not needed...
 #       cprint("summer time delta %s" % td)
 #       offset = datetime.fromtimestamp(ts) - datetime.utcfromtimestamp(ts) - td
@@ -843,7 +843,7 @@ class EPGExport(Screen):
 				if len(service_name) > 0 and service_ref.find("//") == -1:
 					service_id = self.channelID(service)
 					for event in program[1]:
-						prog = dict()
+						# prog = dict()
 						title = self.b2s(event[1]).strip()
 						start = int(event[2])
 						duration = int(event[3])
@@ -1029,7 +1029,7 @@ class EPGExportSelection(ConfigListScreen, Screen):
 
 	def changedEntry(self):
 		choice = self["config"].getCurrent()
-		current = choice[1]
+		# current = choice[1]
 		if choice is not None:
 			self.createSetup()
 
