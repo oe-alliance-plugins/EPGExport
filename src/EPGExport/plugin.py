@@ -22,12 +22,11 @@ from backports.lzma import open as lzmaopen
 from os import mkdir, symlink, remove, listdir, readlink
 from os.path import join, exists, islink, basename
 from gzip import open as gzipopen
-from time import time, localtime, mktime, strftime
+from time import gmtime, time, localtime, mktime, strftime
 from datetime import datetime, timezone
 import xml.etree.ElementTree as etree
 from shutil import rmtree
 from socket import gethostname, getfqdn
-from time import gmtime, strftime
 from twisted.internet.threads import deferToThread
 from twisted.internet.reactor import listenTCP, run
 from twisted.web import http, static
