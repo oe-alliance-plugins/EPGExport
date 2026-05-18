@@ -614,6 +614,7 @@ class EPGExport(Screen):
 		sp = []
 		sp = lang.split("_")
 		self.language = sp[0].lower()
+		self.services = []
 		if SERVICELIST:  # use current bouquet if none is found...
 			bouquet = SERVICELIST.getRoot()
 			if bouquet:
@@ -622,7 +623,6 @@ class EPGExport(Screen):
 				bouquet_name = info.getName(bouquet)
 				cprint("DEFAULT bouquet %s" % bouquet_name)
 				all_bouquets = SERVICELIST.getBouquetList()
-				self.services = []
 				for bouquets in all_bouquets:
 					bt = tuple(bouquets)
 					bouquet_name = bt[0].replace(" (TV)", "").replace(" (Radio)", "").lower()
