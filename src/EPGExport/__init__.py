@@ -6,15 +6,18 @@ from os.path import join
 from Components.Language import language
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 
+
+PluginLanguageDomain = "EPGExport"
+
 PLUGINPATH = resolveFilename(SCOPE_PLUGINS, "Extensions/EPGExport/")
 
 
 def localeInit():
-    bindtextdomain("EPGExport", join(PLUGINPATH, "locale"))
+    bindtextdomain(PluginLanguageDomain, join(PLUGINPATH, "locale"))
 
 
 def _(txt):
-    t = dgettext("EPGExport", txt)
+    t = dgettext(PluginLanguageDomain, txt)
     if t == txt:
         t = gettext(txt)
     return t
